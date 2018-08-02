@@ -1,0 +1,86 @@
+
+nodejs
+
+https://nodejs.org/en/
+
+http://nodejs.cn/
+
+java #C nodejs
+
+
+验证版本  
+
+node -v --version
+
+npm -v --version --v -version
+
+
+js组成：
+1、DOM
+2、BOM
+3、ECMAScript  ***
+
+
+node文件的命名：
+
+node.js
+nodejs.js
+
+---------------------------------------------------------------------
+
+node 用来写服务器
+
+http  80
+https 443
+
+---------------------------------------------------------------------
+
+1、引入模块 http
+2、创建服务
+3、监听端口
+
+
+
+readFile     异步
+readFileSync 同步
+
+Sync?
+
+ajax  Asynchronous JavaScript and XML
+
+
+try{
+	//有可能出错的代码
+}catch(e){ //error
+	//补救的代码或者提示信息
+}
+
+
+
+fs.readFile("地址、路径"[,编码],回调函数(err,data){...});
+fs.readFileSync("地址、路径"[,编码]);
+
+Buffer对象  utf-8/utf8/data+""/data.toString();
+
+-------------------------------------------------------------
+
+用户的登录注册
+
+接口
+
+登录/注册
+http://localhost:9000/login?user=aaa&pass=123
+http://localhost:9000/reg?user=aaa&pass=123
+
+{error:1/0,msg:"登录成功/用户名或者密码错误"}
+
+
+
+
+
+
+
+
+
+
+

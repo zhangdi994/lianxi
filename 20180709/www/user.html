@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    
+    <script>
+        $(function(){
+            var $oUser = $("#user");
+            var $oPass = $("#pass");
+            var $oBtnLogin = $("#login");
+            var $oBtnReg = $("#reg");
+
+            //登录
+            $oBtnLogin.click(function(){
+                $.ajax({
+                    url:"/login",
+                    data:{
+                        user:$oUser.val(),
+                        pass:$oPass.val()
+                    },
+                    dataType:"json",
+                    success:function(json){
+                        alert(1);
+                        console.log(json);
+                    }
+                });
+            });
+
+            //注册
+            $oBtnReg.click(function(){
+                $.ajax({
+                    url:"/reg",
+                    data:{
+                        user:$oUser.val(),
+                        pass:$oPass.val(),
+                    },
+                    dataType:"json",
+                    success:function(json){
+                        console.log(json);
+                    }
+                });
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+
+ 用户名：<input id="user" type="text" value="aaa"/><br/>
+ 密码：<input id="pass" type="text" value="123"/><br/>
+ <input id="login" type="button" value="登录"/>
+ <input id="reg" type="button" value="注册"/>
+</body>
+</html>
